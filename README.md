@@ -9,3 +9,6 @@ Esta POC, valida:
 - mobx-react
 
 Apenas para fins de aprendizado.
+
+Autor: Lucas Reis M. Dias (thereis@live.com)
+Data: 28/02/2018
