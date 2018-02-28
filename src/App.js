@@ -8,6 +8,7 @@ import {Drawer, AppBar, Toolbar, Grid, List, Typography, Button} from 'material-
 import {Switch, Route, withRouter}                               from 'react-router-dom'
 
 /* Components imports */
+import './assets/styles/index.css'
 import ProductsList                                              from './components/ProductsList'
 import ProductEdit                                               from './components/ProductEdit'
 import AddProduct                                                from './components/AddProduct'
