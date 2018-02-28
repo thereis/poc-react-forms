@@ -2,8 +2,7 @@ import React, {Component} from 'react'
 
 import {Input, FormControl, FormHelperText} from 'material-ui'
 
-import {observer}      from 'mobx-react'
-import {productsStore} from '../store'
+import {observer} from 'mobx-react'
 
 import _ from 'lodash'
 
@@ -11,15 +10,7 @@ import _ from 'lodash'
 class CalcPrice extends Component {
 
     handleChange = (event) => {
-
         _.merge(this.props.saveAt, {[event.target.name]: Number(event.target.value)})
-
-        // productsStore.productsList = {[event.target.name]: event.target.value}
-        console.log(productsStore.total)
-
-        // console.log(productsStore.teste(this.props.saveAt, {a: 'oiea'}))
-        // let newObj        = Object.assign({}, this.props.saveAt, {[event.target.name]: event.target.value})
-        // this.props.saveAt = newObj
     }
 
     render() {

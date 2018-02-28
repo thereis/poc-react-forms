@@ -1,17 +1,18 @@
 import React, {Component} from 'react'
 
+/* Store imports */
 import {observer} from 'mobx-react'
-
 import {productsStore} from '../store/index'
 
+/* Router imports */
 import {withRouter, Link} from 'react-router-dom'
 
-import {withStyles}                                 from 'material-ui/styles'
-import {Grid, Divider, Typography}                  from 'material-ui'
-import List, {ListItem, ListItemText, ListItemIcon} from 'material-ui/List'
-import StarIcon                                     from 'material-ui-icons/Star'
-
-import ProductEdit from './ProductEdit'
+/* Material-UI imports */
+import {
+    Divider, Typography, ListItem,
+    ListItemText, ListItemIcon, List
+}               from 'material-ui'
+import StarIcon from 'material-ui-icons/Star'
 
 @observer
 class ProductsList extends Component {
@@ -40,11 +41,6 @@ class ProductsList extends Component {
                         )
                     }
                 </List>
-                {/*<Grid item xs={12} md={9}>*/}
-                {/*{*/}
-                {/*productsStore.selectedProduct && (<ProductEdit/>)*/}
-                {/*}*/}
-                {/*</Grid>*/}
             </div>
         )
     }

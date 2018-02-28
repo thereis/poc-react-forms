@@ -1,42 +1,30 @@
 import React, {Component} from 'react'
 
-import {observer} from 'mobx-react'
+/* Store imports */
+import {productsStore}    from '../store'
+import {observer}         from 'mobx-react'
+import _                  from 'lodash'
 
-import {productsStore} from '../store'
-import CalcPrice       from './CalcPrice'
+/* Router imports */
+import {withRouter}       from 'react-router-dom'
 
-import {withRouter} from 'react-router-dom'
-
+/* Material-UI imports */
 import {
-    Grid,
-    ListItem,
-    ListItemText,
-    List,
-    FormGroup,
-    Button,
-    FormControl,
-    Input, InputLabel
-} from 'material-ui'
+    Grid, ListItem, ListItemText,
+    List, FormGroup, Button,
+    FormControl, Input, InputLabel, Typography,
+    Dialog, DialogActions, DialogContent, DialogTitle
+}                         from 'material-ui'
 
-import Dialog, {
-    DialogActions,
-    DialogContent,
-    DialogTitle
-} from 'material-ui/Dialog'
-
-import Typography from 'material-ui/Typography'
-
-let _ = require('lodash')
+/* Components imports */
+import CalcPrice          from './CalcPrice'
 
 @observer
 class ProductEdit extends Component {
 
     constructor(props) {
         super(props)
-
-        console.log(props)
     }
-
 
     state = {
         open: false
@@ -62,7 +50,6 @@ class ProductEdit extends Component {
     render() {
 
         if (productsStore.selectedProduct === null && this.props.match.params) {
-
             let id                        = this.props.match.params.id
             productsStore.selectedProduct = productsStore.products.find((product) => product.id == id)
         }
